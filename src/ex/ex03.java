@@ -5,11 +5,40 @@
  * Date: 2016/11/21
  * Author: 1050210XX 周永振老師
  */
-
+import java.util.Scanner;
 public class ex03 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		Scanner scn = new Scanner(System.in);
+		int n1 = scn.nextInt();
+		int m1 = scn.nextInt();
+		int n2 = scn.nextInt();
+		int m2 = scn.nextInt();
+		int data1[][] = new int [n1][m1];
+		int data2[][] = new int [n2][m2];
+		int data3[][] = new int [n1][m2];
+		for(int i = 0;i<n1;i++){
+			for(int j = 0;j<m1;j++){
+				data1[i][j] = scn.nextInt();
+			}
+		}
+		for(int i = 0;i<n2;i++){
+			for(int j = 0;j<m2;j++){
+				data2[i][j] = scn.nextInt();
+			}
+		}
+		for(int i = 0;i<n1;i++){
+			for(int j = 0;j<m1;j++){
+				data3[i][j] = data1[i][j]*data2[i][j]+data1[i][j]*data2[i][j];
+			}
+		}
+		for(int i = 0;i<n1;i++){
+			for(int j = 0;j<m1;j++){
+				System.out.print(data3[i][j]+" ");
+			}
+			System.out.println();
+		}
 
 	}
 
