@@ -14,17 +14,21 @@ public class ex01 {
 		fun(n);
 	}
 	public static void fun(int n){
-		int sum = 0,sum2 = 0,a = 1;
+		int sum =0,sum1 = 0,i =1;
 		while(n>0){
 			sum = n%2;
-			n = n/2;			
-			sum2 = sum2+(sum*a);
-			a =a* 10;
-			
-			
-			
+			n = n/2;
+			sum1 =sum1 +(i*sum);
+			i = i*10;
 		}
-		System.out.print(sum2);
+		System.out.print(sum1);
+		
+
+			
+			
+			
+		
+		
 		
 
 	}

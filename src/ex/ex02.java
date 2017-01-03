@@ -12,24 +12,33 @@ public class ex02 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner scn = new Scanner(System.in);
-		System.out.println("請先輸入幾進制在輸入數字");
-		
+		System.out.println("幾進制轉幾進制 再輸入數字");
+		int a = scn.nextInt();
 		int b = scn.nextInt();
-		int n = scn.nextInt();
-		fun(b, n);
-	}
+		String str = scn.next();
+		char[] data = str.toCharArray();
+		int c = data.length;
+		int sum = 0;
+		int d = 0;
 
-	public static void fun(int b, int n) {
+		for (int i = 0; i < data.length; i++) {
+			d = data[i] - 48;
+			sum = sum + (d * ((int) Math.pow(a, c - 1)));
+			c--;
+		}
+		int x = 0;
+		int sum2 = 0;
 
-		int sum = 0, sum2 = 0, c = 1;
-		while (n > 0) {
-			sum = n % b;
-			n = n / b;
-			sum2 = sum2 + (sum * c);
-			c = c * 10;
+		
+		int i = 1;
+		while (sum > 0) {
+			x = (sum % b);
+			sum = sum / b;
+			sum2 = sum2 + x * i;
+			i = i * 10;
 
 		}
-		System.out.println(sum2);
+		System.out.print(sum2);
 
 	}
 }

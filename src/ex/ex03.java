@@ -11,6 +11,7 @@ public class ex03 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner scn = new Scanner(System.in);
+		System.out.println("請輸入幾乘幾矩陣乘上幾乘幾矩陣");
 		int n1 = scn.nextInt();
 		int m1 = scn.nextInt();
 		int n2 = scn.nextInt();
@@ -21,6 +22,7 @@ public class ex03 {
 		for(int i = 0;i<n1;i++){
 			for(int j = 0;j<m1;j++){
 				data1[i][j] = scn.nextInt();
+				
 			}
 		}
 		for(int i = 0;i<n2;i++){
@@ -29,9 +31,11 @@ public class ex03 {
 			}
 		}
 		for(int i = 0;i<n1;i++){
-			for(int j = 0;j<m1;j++){
-				data3[i][j] = data1[i][j]*data2[i][j]+data1[i][j]*data2[i][j];
+			for(int j = 0;j<m2;j++){
+				for(int k = 0;k<m1;k++){
+				data3[i][j] = data3[i][j]+data1[i][k]*data2[k][j];
 			}
+		}
 		}
 		for(int i = 0;i<n1;i++){
 			for(int j = 0;j<m1;j++){
